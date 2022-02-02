@@ -38,4 +38,4 @@ Ans: We need different brances for stable production Releases.
      which needs to get started before older version is completed and so if we name new version as Release2023 we can work on both releases at a time.
 
 •In a project how many remote Git repositories do you usually have?
-Ans: We can have as many number of remote repositories we need.
+Ans: We can have one remote Git repository in a project.
