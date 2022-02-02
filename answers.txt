@@ -1,10 +1,36 @@
 •What is a gitignore file and what should it include for a Java project?
 Ans: gitignore is a kind of file that contains ignore rules.It allows us to ignore the Git repository files.
      For a Java project it should contain rules that are to be shared with the repository.
+     Some examples of gitignore file include:
+     # Eclipse Specific:
+     .metadata
+      bin/
+      tmp/
+      *.tmp
+      *.swp
+      *~.nib
+      local.properties
+      .settings/
+      .loadpath
+      # PyDev specific (Python IDE for Eclipse)
+          *.pydevproject
+      # CDT-specific (C/C++ Development Tooling)
+          .cproject
+      # Java annotation processor (APT)
+          .factorypath
+      # PDT-specific (PHP Development Tools)
+          .buildpath
+      # sbteclipse plugin
+          .target
 
 •What does fast-forward in Git mean?
 Ans: fast forward in Git - This means to update the HEAD pointer so that it's new value is direct descendant of the before value.
      which is, the before value is a parent, or grandparent, etc.
+     For example consider the below branch setup:
+     We have two branches referencing the same commit. Both of them have exact same history. Now do a commit to child branch .
+     Master branch is still referencing same, while child branch has advanced by two commits. The child branch now considered ahead of master.
+     Now lets see when Git does a fast-forward. Git updates the master branch to reference the same commit that child branch does. 
+     There are No changes to repository itself, as commits from child branch already has all the required changes.
 
 •Why should you have different branches?
 Ans: We need different brances for stable production Releases.
